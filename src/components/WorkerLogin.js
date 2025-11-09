@@ -41,14 +41,18 @@ function WorkerLogin() {
           </div>
 
           <div className="options">
-            <label>
-              <input type="checkbox" /> Remember me
-            </label>
+            
             <Link className="forgot" to="#">Forgot Password?</Link>
           </div>
 
           <button className="login-btn">LOGIN</button>
-          <button className="register-btn">REGISTER</button>
+<Link to="/workerregister">
+  <button className="register-btn" type="button">
+    REGISTER
+  </button>
+</Link>
+
+
         </form>
       </div>
     </div>

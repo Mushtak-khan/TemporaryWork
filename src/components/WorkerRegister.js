@@ -1,23 +1,27 @@
-// src/components/UserLogin.js
 import React, { useState } from "react";
-import "./Login.css";
+import "./Login.css"; // same styling as others
 import { Link } from "react-router-dom";
 
-function UserLogin() {
+function WorkerRegister() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
-    alert(`User Logged In: ${email}`);
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+    alert(`Worker registered successfully with ${email}`);
   };
 
   return (
     <div className="login-container">
       <div className="login-box">
-        <div className="profile-icon">👤</div>
+        <div className="profile-icon">👷‍♂️</div>
 
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleRegister}>
           <div className="input-group">
             <span>📧</span>
             <input
@@ -40,26 +44,30 @@ function UserLogin() {
             />
           </div>
 
-          <div className="options">
-            
-            <Link className="forgot" to="#">
-              Forgot Password?
-            </Link>
+          <div className="input-group">
+            <span>🔒</span>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
           </div>
 
           <button className="login-btn" type="submit">
-            LOGIN
+            REGISTER
           </button>
-         <Link to="/userregister">
-  <button className="register-btn" type="button">
-    REGISTER
-  </button>
-</Link>
 
+          <Link to="/workerlogin">
+            <button className="register-btn" type="button">
+              LOGIN
+            </button>
+          </Link>
         </form>
       </div>
     </div>
   );
 }
 
-export default UserLogin;
+export default WorkerRegister;

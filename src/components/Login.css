@@ -1,7 +1,7 @@
 .login-container {
   width: 300px;
-  margin: 60px auto;
-  padding: 20px;
+  margin: 10px 500px 10px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   background-color: #fff;
@@ -10,16 +10,16 @@
 
 .login-container input {
   display: block;
-  width: 90%;
+  width: 80%;
   padding: 10px;
-  margin: 10px auto;
+  margin: -5pxx 10px -5px;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
 .login-container button {
   background-color: #007bff;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 10px 15px;
   border-radius: 8px;
@@ -31,11 +31,11 @@
 }
 /* Background */
 .login-container {
-  height: 100vh;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #7b06d8, #a104ff, #e60073);
+  background: linear-gradient(135deg, #06a7d8, #350a4e, #050203);
   color: white;
 }
 
@@ -43,9 +43,9 @@
 .login-box {
   background: rgba(255, 255, 255, 0.1);
   padding: 35px;
-  width: 350px;
+  width: 250px;
   border-radius: 15px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   text-align: center;
 }
 
@@ -79,7 +79,7 @@
 .options {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0 20px;
+  margin: -10px 5px -10px;
   font-size: 13px;
 }
 
@@ -94,7 +94,7 @@
   margin-top: 10px;
   border: none;
   border-radius: 5px;
-  background: #ff0099;
+  background: #155e63;
   color: white;
   font-weight: bold;
   cursor: pointer;

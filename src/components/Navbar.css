@@ -1,17 +1,17 @@
-/* src/components/Navbar.css */
-
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #007bff;
+  background-color: #044f8d;
   color: white;
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  font-family: Arial, sans-serif;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -22,12 +22,15 @@
   padding: 0;
 }
 
-.nav-links a {
+.nav-links li a {
   text-decoration: none;
   color: white;
-  font-weight: 500;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #ffe082;
+.nav-links li a:hover {
+  background-color: #555;
 }
