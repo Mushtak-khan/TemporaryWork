@@ -1,22 +1,30 @@
 import React, { useState } from "react";
-import "./Login.css";
-import { Link } from "react-router-dom";
+import "./Login.css"; // ✅ using same CSS as WorkerRegister
+import { Link, useNavigate } from "react-router-dom";
 
-function UserLogin() {
+function UserRegister() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
-    alert(`User logged in successfully with ${email}`);
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+    alert(`User registered successfully with ${email}`);
+    navigate("/user-login"); // ✅ Redirect to login after register
   };
 
   return (
     <div className="login-container">
       <div className="login-box">
         <div className="profile-icon">👤</div>
+        <h2>User Register</h2>
 
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleRegister}>
           <div className="input-group">
             <span>📧</span>
             <input
@@ -39,14 +47,24 @@ function UserLogin() {
             />
           </div>
 
+          <div className="input-group">
+            <span>🔒</span>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+          </div>
+
           <button className="login-btn" type="submit">
-            LOGIN
+            REGISTER
           </button>
 
-          {/* 👇 This will navigate to the UserRegister page */}
-          <Link to="/userregister">
+          <Link to="/user-login">
             <button className="register-btn" type="button">
-              REGISTER
+              LOGIN
             </button>
           </Link>
         </form>
@@ -55,4 +73,4 @@ function UserLogin() {
   );
 }
 
-export default UserLogin;
+export default UserRegister;

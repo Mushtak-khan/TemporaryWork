@@ -1,13 +1,13 @@
-/* Login.css - used by both UserLogin & UserRegister */
-
+/* Background container */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* worker theme: blue-purple */
 }
 
+/* Register Card */
 .login-box {
   background: white;
   padding: 2rem;
@@ -17,16 +17,19 @@
   text-align: center;
 }
 
+/* Profile Icon */
 .profile-icon {
   font-size: 60px;
   margin-bottom: 10px;
 }
 
+/* Title */
 h2 {
   margin-bottom: 1.5rem;
   color: #333;
 }
 
+/* Input fields */
 .input-group {
   display: flex;
   align-items: center;
@@ -49,10 +52,11 @@ h2 {
   font-size: 15px;
 }
 
+/* Register Button */
 .login-btn {
   width: 100%;
   padding: 10px;
-  background: #0984e3;
+  background: #007bff; /* main blue */
   color: white;
   border: none;
   border-radius: 8px;
@@ -63,9 +67,10 @@ h2 {
 }
 
 .login-btn:hover {
-  background: #74b9ff;
+  background: #3399ff;
 }
 
+/* Back to Login Button */
 .register-btn {
   width: 100%;
   padding: 10px;
