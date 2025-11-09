@@ -1,50 +1,135 @@
+/* Page Title */
 .page-title {
   text-align: center;
   margin-top: 20px;
   color: #333;
+  font-size: 28px;
+  font-weight: 600;
 }
 
-/* Keep input and button in one line */
+/* 🔍 Search bar container */
 .search-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  margin: 20px 0;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;        /* ✅ Wraps on smaller screens */
+  gap: 12px;
+  margin: 25px 0;
 }
 
-/* Input box */
-.search-container input {
-  width: 300px;
-  padding: 10px;
-  border-radius: 5px;
+/* Input & Dropdown (same look) */
+.search-container input,
+.search-container select {
+  width: 260px;
+  padding: 10px 12px;
+  border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  background-color: #fff;
 }
 
-/* Search / Clear button */
+.search-container input:focus,
+.search-container select:focus {
+  border-color: #007bff;
+}
+
+/* Search Button */
 .search-container button {
-  padding: 10px 20px;
+  padding: 10px 25px;
   background-color: #007bff;
-  border: none;
   color: white;
-  border-radius: 5px;
-  cursor: pointer;
+  border: none;
+  border-radius: 6px;
   font-size: 16px;
-  transition: 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .search-container button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-/* Worker image fix */
-.worker-photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ddd;
-  margin-bottom: 10px;
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .search-container {
+    flex-direction: column; /* Stack on small screens */
+    align-items: stretch;
+  }
+
+  .search-container input,
+  .search-container select,
+  .search-container button {
+    width: 90%;
+  }
+}
+/* 🔍 Search Section */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0;
+  gap: 15px;
+}
+
+/* Row with input + select */
+.search-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+/* Input + Select styling */
+.search-row input,
+.search-row select {
+  width: 250px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  background-color: #fff;
+}
+
+.search-row input:focus,
+.search-row select:focus {
+  border-color: #007bff;
+}
+
+/* Search Button (centered below) */
+.search-btn {
+  padding: 10px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .search-row {
+    flex-direction: column;
+  }
+
+  .search-row input,
+  .search-row select {
+    width: 90%;
+  }
+
+  .search-btn {
+    width: 50%;
+  }
 }

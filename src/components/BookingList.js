@@ -1,30 +1,36 @@
 // src/components/BookingList.js
 import React from "react";
-import "./BookingList.css"; // we'll add this new CSS file
+import "./BookingList.css";
 
 function BookingList({ bookings }) {
   return (
     <div className="booking-list">
-      <h2>Booked Workers</h2>
+      <h2 className="booking-title">Your Bookings</h2>
 
       {bookings.length === 0 ? (
-        <p className="no-booking">No bookings yet.</p>
+        <p className="no-bookings">No bookings yet.</p>
       ) : (
-        <div className="booked-workers">
+        <div className="booking-grid">
           {bookings.map((worker) => (
-            <div key={worker.id} className="booking-card">
+            <div className="booking-card" key={worker.id}>
               <img
-                src={worker.image || "https://via.placeholder.com/100"} // default if no image
+                src={worker.image}
                 alt={worker.name}
-                className="worker-photo"
+                className="booking-photo"
               />
-              <div className="booking-details">
-                <h3>{worker.name}</h3>
-                <p>Skill: {worker.skill}</p>
-                {worker.location && <p>Location: {worker.location}</p>}
-                <p>Price: ₹{worker.price}</p>
-                <p>Rating: ⭐ {worker.rating}</p>
-              </div>
+              <h3>{worker.name}</h3>
+              <p>
+                <strong>Skill:</strong> {worker.skill}
+              </p>
+              <p>
+                <strong>Location:</strong> {worker.location}
+              </p>
+              <p>
+                <strong>Price:</strong> ₹{worker.price}
+              </p>
+              <p>
+                <strong>Rating:</strong> ⭐ {worker.rating}
+              </p>
             </div>
           ))}
         </div>
