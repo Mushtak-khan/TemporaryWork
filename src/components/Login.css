@@ -1,3 +1,4 @@
+
 .login-container {
   width: 300px;
   margin: 10px 500px 10px;
@@ -6,6 +7,7 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   background-color: #fff;
   text-align: center;
+
 }
 
 .login-container input {
@@ -31,7 +33,7 @@
 }
 /* Background */
 .login-container {
-  height: 400px;
+  height:auto;
   display: flex;
   align-items: center;
   justify-content: center;

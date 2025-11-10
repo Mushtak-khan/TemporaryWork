@@ -1,34 +1,31 @@
 .navbar {
-<<<<<<< HEAD
-  background-color: #044f8d;
+
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12px 40px;
   font-family: Arial, sans-serif;
-=======
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #007bff;
+  background-color: #001a35;
   padding: 15px 30px;
->>>>>>> 363c35830f7e5bce929225ac253ec0927c81e21a
+
 }
 
 /* Logo (WorkDone) — clickable but no underline */
 .logo {
-<<<<<<< HEAD
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 1px;
-=======
+
   color: white;
   font-size: 24px;
   font-weight: 700;
   text-decoration: none; /* removes underline */
   cursor: pointer;
->>>>>>> 363c35830f7e5bce929225ac253ec0927c81e21a
+
 }
 
 /* Optional: prevent underline on hover too */
@@ -43,9 +40,9 @@
   gap: 20px;
   margin: 0;
   padding: 0;
+  
 }
 
-<<<<<<< HEAD
 .nav-links li a {
   text-decoration: none;
   color: white;
@@ -56,10 +53,10 @@
 }
 
 .nav-links li a:hover {
-  background-color: #555;
-=======
+  background-color: #07573f;
+}
 .nav-links a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 16px;
   transition: 0.3s;
@@ -67,5 +64,5 @@
 
 .nav-links a:hover {
   text-decoration: underline;
->>>>>>> 363c35830f7e5bce929225ac253ec0927c81e21a
+
 }
