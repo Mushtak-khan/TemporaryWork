@@ -1,63 +1,33 @@
-
+/* ✅ Main container: centers everything perfectly */
 .login-container {
-  width: 300px;
-  margin: 10px 500px 10px;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  background-color: #fff;
-  text-align: center;
-
-}
-
-.login-container input {
-  display: block;
-  width: 80%;
-  padding: 10px;
-  margin: -5pxx 10px -5px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.login-container button {
-  background-color: #007bff;
-  color: rgb(255, 255, 255);
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.login-container button:hover {
-  background-color: #0056b3;
-}
-/* Background */
-.login-container {
-  height:auto;
+  min-height: 100vh; /* full screen height */
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #06a7d8, #350a4e, #050203);
-  color: white;
+  padding: 20px;
 }
 
-/* Card */
+/* ✅ Login/Register Box */
 .login-box {
   background: rgba(255, 255, 255, 0.1);
   padding: 35px;
-  width: 250px;
+  width: 100%;
+  max-width: 320px; /* responsive width */
   border-radius: 15px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
-/* Profile Icon */
+/* ✅ Profile Icon */
 .profile-icon {
   font-size: 50px;
   margin-bottom: 20px;
 }
 
-/* Input Fields */
+/* ✅ Input Fields */
 .input-group {
   display: flex;
   align-items: center;
@@ -67,6 +37,7 @@
 
 .input-group span {
   margin-right: 10px;
+  font-size: 18px;
 }
 
 .input-group input {
@@ -76,12 +47,14 @@
   border: none;
   outline: none;
   color: white;
+  font-size: 14px;
 }
 
+/* ✅ Options (Forgot Password, Remember Me, etc.) */
 .options {
   display: flex;
   justify-content: space-between;
-  margin: -10px 5px -10px;
+  margin-top: 5px;
   font-size: 13px;
 }
 
@@ -90,23 +63,37 @@
   text-decoration: none;
 }
 
-.login-btn, .register-btn {
+/* ✅ Buttons */
+.login-btn,
+.register-btn {
   width: 100%;
   padding: 12px;
-  margin-top: 10px;
+  margin-top: 12px;
   border: none;
   border-radius: 5px;
-  background: #155e63;
   color: white;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 
+.login-btn {
+  background: #155e63;
+}
+
 .register-btn {
   background: #cc00ff;
 }
 
-.login-btn:hover, .register-btn:hover {
+.login-btn:hover,
+.register-btn:hover {
   opacity: 0.85;
+}
+
+/* ✅ Make it responsive for mobile */
+@media (max-width: 480px) {
+  .login-box {
+    width: 90%;
+    padding: 25px;
+  }
 }

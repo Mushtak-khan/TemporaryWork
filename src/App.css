@@ -16,14 +16,14 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin: 25px 25px 0;
-
+  margin: 25px 0;
 
 }
 .service-box {
-  background-color: #007bff;
+ 
+  background-color: #143150;
   color: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   font-size: 18px;
   font-weight: 500;
@@ -37,7 +37,7 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+  gap: 15px;
   padding: 0 40px;
 }
 /* 🔍 Search Section */
@@ -49,10 +49,8 @@
   gap: 10px; /* space between input, select, and button */
   margin: 30px auto;
   flex-wrap: wrap; /* keeps it responsive on small screens */
-   box-shadow: 2px 2px 8px #333;
-   border-radius: 10%;
-  background:linear-gradient(135deg, #06a7d8, #350a4e, #050203);
-}
+  
+  }
 
 /* Input + Select */
 .search-container input,

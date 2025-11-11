@@ -1,24 +1,16 @@
+// Navbar.js
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css"; // make sure to create this file
+import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ onHomeClick }) {
   return (
     <nav className="navbar">
-
-    
-     
-      <Link to="/" className="logo">
-        WorkDone
-      </Link>
-
-
+      <Link to="/" className="logo" onClick={onHomeClick}>WorkDone</Link>
       <ul className="nav-links">
-       <b><li><Link to="/">Home</Link></li></b> 
-        <b><li><Link to="/userlogin">User Login</Link></li></b>
-       <b> <li><Link to="/workerlogin">Worker Login</Link></li></b>
-       
-       
+        <li><Link to="/" onClick={onHomeClick}>Home</Link></li>
+        <li><Link to="/userlogin">User Login</Link></li>
+        <li><Link to="/workerlogin">Worker Login</Link></li>
       </ul>
     </nav>
   );
