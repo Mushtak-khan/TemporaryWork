@@ -79,7 +79,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap:15px;
   flex-wrap: wrap; /* makes it responsive */
 }
 
@@ -87,7 +87,7 @@
 .search-row input,
 .search-row select {
   width: 250px;
-  padding: 10px 12px;
+  padding: 10px 12px; 
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 16px;
