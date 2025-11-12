@@ -17,7 +17,12 @@ function App() {
   const [nameOrCity, setNameOrCity] = useState("");
   const [profession, setProfession] = useState("");
   const [filteredWorkers, setFilteredWorkers] = useState([]);
-
+  <Navbar onHomeClick={() => {
+  setNameOrCity("");
+  setProfession("");
+  setFilteredWorkers([]);
+  window.scrollTo(0, 0);
+}} />
    const workers = [
   // ⚡ Electricians
   { id: 1, name: "Amit Kumar", skill: "Electrician", location: "Delhi", price: 500, rating: 4.5, photo: "/images/worker1.jpg" },
@@ -314,6 +319,7 @@ function App() {
           />
 
           {/* Other Pages */}
+          <Route path="/" element={<Home />} />
           <Route path="/userlogin" element={<UserLogin />} />
           <Route path="/workerlogin" element={<WorkerLogin />} />
           <Route path="/userregister" element={<UserRegister />} />
