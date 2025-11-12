@@ -1,3 +1,4 @@
+// src/components/UserLogin.js
 import React, { useState } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
@@ -8,7 +9,7 @@ function UserLogin() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    alert(`User logged in successfully with ${email}`);
+    alert(`User Logged In: ${email}`);
   };
 
   return (
@@ -39,16 +40,22 @@ function UserLogin() {
             />
           </div>
 
+          <div className="options">
+            
+            <Link className="forgot" to="#">
+              Forgot Password?
+            </Link>
+          </div>
+
           <button className="login-btn" type="submit">
             LOGIN
           </button>
+         <Link to="/userregister">
+  <button className="register-btn" type="button">
+    REGISTER
+  </button>
+</Link>
 
-          {/* 👇 This will navigate to the UserRegister page */}
-          <Link to="/userregister">
-            <button className="register-btn" type="button">
-              REGISTER
-            </button>
-          </Link>
         </form>
       </div>
     </div>

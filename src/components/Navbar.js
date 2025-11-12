@@ -1,19 +1,20 @@
 import React from "react";
-import "./Navbar.css";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ onHomeClick }) {
   return (
     <nav className="navbar">
-      {/* Make WorkDone clickable, but no underline */}
-      <Link to="/" className="logo">
+      {/* ✅ Logo redirects to Home and triggers onHomeClick */}
+      <Link to="/" className="logo" onClick={onHomeClick}>
         WorkDone
       </Link>
 
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/user-login">User Login</Link></li>
-        <li><Link to="/worker-login">Worker Login</Link></li>
+        <b><li><Link to="/notifications">🔔</Link></li></b>
+        <b><li><Link to="/">Home</Link></li></b>
+        <b><li><Link to="/userlogin">User Login</Link></li></b>
+        <b><li><Link to="/workerlogin">Worker Login</Link></li></b>
       </ul>
     </nav>
   );

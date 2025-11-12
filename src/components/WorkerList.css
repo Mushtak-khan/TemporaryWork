@@ -1,48 +1,97 @@
+/* 🧰 Worker List Container */
 .worker-list {
   text-align: center;
-  margin: 20px;
+  margin: 30px auto;
+  padding: 10px;
 }
 
+/* 🧱 Grid Layout */
 .worker-grid {
   display: grid;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  padding: 10px;
 }
 
+/* 💼 Worker Card */
 .worker-card {
-  background: #fff;
-  padding: 15px;
-  width: 220px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #ffffff;
+  padding: 20px;
+  width: 260px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.2s;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .worker-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* 🖼️ Worker Image */
 .worker-photo {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
-  border: 3px solid #ddd;
-  
+  margin-bottom: 12px;
+  border: 3px solid #007bff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f0f0f0;
 }
 
+
+/* 🧑 Worker Name & Skill */
+.worker-card h3 {
+  margin: 0px 0 5px;
+  font-size: 20px;
+  color: #222;
+}
+
+.worker-skill {
+  color: #007bff;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* 📋 Worker Details */
+.worker-details {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.worker-details p {
+  margin: 4px 0;
+}
+
+/* 🎯 Book Button */
 .book-btn {
   background-color: #007bff;
   color: white;
-  padding: 8px 15px;
+  padding: 10px 18px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .book-btn:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* 🚫 No Worker Message */
+.no-worker {
+  color: #ff4444;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 40px;
 }

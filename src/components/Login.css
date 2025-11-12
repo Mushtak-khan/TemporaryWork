@@ -1,83 +1,99 @@
-/* Login.css - used by both UserLogin & UserRegister */
-
+/* ✅ Main container: centers everything perfectly */
 .login-container {
+  min-height: 100vh; /* full screen height */
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 90vh;
-  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  justify-content: center;
+  background: linear-gradient(135deg, #06a7d8, #350a4e, #050203);
+  padding: 20px;
 }
 
+/* ✅ Login/Register Box */
 .login-box {
-  background: white;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  width: 320px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 35px;
+  width: 100%;
+  max-width: 320px; /* responsive width */
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
+/* ✅ Profile Icon */
 .profile-icon {
-  font-size: 60px;
-  margin-bottom: 10px;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
-h2 {
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
+/* ✅ Input Fields */
 .input-group {
   display: flex;
   align-items: center;
-  background: #f1f2f6;
-  border-radius: 8px;
-  padding: 8px;
-  margin-bottom: 15px;
+  margin: 15px 0;
+  border-bottom: 1px solid #ffffffaa;
 }
 
 .input-group span {
+  margin-right: 10px;
   font-size: 18px;
-  margin-right: 8px;
 }
 
 .input-group input {
-  flex: 1;
-  border: none;
+  width: 100%;
+  padding: 10px;
   background: transparent;
+  border: none;
   outline: none;
-  font-size: 15px;
+  color: white;
+  font-size: 14px;
+}
+
+/* ✅ Options (Forgot Password, Remember Me, etc.) */
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.forgot {
+  color: #ffccff;
+  text-decoration: none;
+}
+
+/* ✅ Buttons */
+.login-btn,
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .login-btn {
-  width: 100%;
-  padding: 10px;
-  background: #0984e3;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: background 0.3s;
-}
-
-.login-btn:hover {
-  background: #74b9ff;
+  background: #155e63;
 }
 
 .register-btn {
-  width: 100%;
-  padding: 10px;
-  background: #dfe6e9;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  color: #2d3436;
-  transition: background 0.3s;
+  background: #cc00ff;
 }
 
+.login-btn:hover,
 .register-btn:hover {
-  background: #b2bec3;
+  opacity: 0.85;
+}
+
+/* ✅ Make it responsive for mobile */
+@media (max-width: 480px) {
+  .login-box {
+    width: 90%;
+    padding: 25px;
+  }
 }

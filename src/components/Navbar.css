@@ -1,21 +1,25 @@
+/* src/components/Navbar.css */
+
 .navbar {
+  color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #007bff;
-  padding: 15px 30px;
+  justify-content: space-between;
+  padding: 12px 40px;
+  font-family: Arial, sans-serif;
+  background-color: #001a35;
 }
 
 /* Logo (WorkDone) — clickable but no underline */
 .logo {
-  color: white;
   font-size: 24px;
   font-weight: 700;
-  text-decoration: none; /* removes underline */
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
   cursor: pointer;
 }
 
-/* Optional: prevent underline on hover too */
 .logo:hover {
   text-decoration: none;
 }
@@ -29,13 +33,43 @@
   padding: 0;
 }
 
-.nav-links a {
+.nav-links li a {
+  text-decoration: none;
   color: white;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #07573f;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 16px;
   transition: 0.3s;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+/* 🔔 Notification styles */
+.notification-item {
+  position: relative;
+}
+
+.notification-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.notification-dot {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  background-color: red;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
 }

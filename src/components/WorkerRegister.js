@@ -1,13 +1,11 @@
-// src/components/WorkerRegister.js
 import React, { useState } from "react";
-import "./Login.css"; // ✅ same style as User pages
-import { Link, useNavigate } from "react-router-dom";
+import "./Login.css"; // same styling as others
+import { Link } from "react-router-dom";
 
 function WorkerRegister() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -16,7 +14,6 @@ function WorkerRegister() {
       return;
     }
     alert(`Worker registered successfully with ${email}`);
-    navigate("/worker-login"); // ✅ automatically go to login after register
   };
 
   return (
@@ -62,7 +59,7 @@ function WorkerRegister() {
             REGISTER
           </button>
 
-          <Link to="/worker-login">
+          <Link to="/workerlogin">
             <button className="register-btn" type="button">
               LOGIN
             </button>

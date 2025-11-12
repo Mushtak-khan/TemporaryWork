@@ -1,48 +1,51 @@
 // src/components/WorkerList.js
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./WorkerList.css";
 
-// ✅ Worker Data stored here (no photo)
-export const workers = [
-  {
-    id: 1,
-    name: "Amit Sharma",
-    skill: "Electrician",
-    location: "Mumbai",
-  },
-  {
-    id: 2,
-    name: "Ravi Patel",
-    skill: "Plumber",
-    location: "Delhi",
-  },
-  {
-    id: 3,
-    name: "Neha Singh",
-    skill: "Painter",
-    location: "Pune",
-  },
-];
+function WorkerList({ workers }) {
+  const navigate = useNavigate();
 
-function WorkerList({ workers, onBook }) {
+  const handleBookClick = (worker) => {
+    // Navigate to BookWorker page and pass worker data via state
+    navigate(`/bookworker/${worker.id}`, { state: { worker } });
+  };
+
   return (
     <div className="worker-list">
       {workers.length === 0 ? (
         <p className="no-worker">No workers found.</p>
       ) : (
-        workers.map((worker) => (
-          <div className="worker-card" key={worker.id}>
-            {/* 🧾 Worker details only (no image) */}
-            <h3>{worker.name}</h3>
-            <p>
-              <strong>Profession:</strong> {worker.skill}
-            </p>
-            <p>
-              <strong>City:</strong> {worker.location}
-            </p>
-            <button onClick={() => onBook(worker)}>Book</button>
-          </div>
-        ))
+        <div className="worker-grid">
+          {workers.map((worker) => (
+            <div className="worker-card" key={worker.id}>
+              <img
+                src={worker.photo}
+                alt={worker.name}
+                className="worker-photo"
+              />
+              <h3>{worker.name}</h3>
+              <p className="worker-skill">{worker.skill}</p>
+              <div className="worker-details">
+                <p>
+                  <strong>City:</strong> {worker.location}
+                </p>
+                <p>
+                  <strong>Price:</strong> ₹{worker.price}
+                </p>
+                <p>
+                  <strong>Rating:</strong> ⭐{worker.rating}
+                </p>
+              </div>
+              <button 
+                className="book-btn"
+                onClick={() => handleBookClick(worker)}
+              >
+                Book Worker
+              </button>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );
