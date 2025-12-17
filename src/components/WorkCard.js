@@ -23,6 +23,5 @@ function WorkerCard({ worker }) {
 
   );
 }
-
-
 export default WorkerCard;
+

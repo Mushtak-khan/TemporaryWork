@@ -1,57 +1,17 @@
+
 // src/components/WorkerList.js
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./WorkerList.css";
 
-// ✅ Worker data
-export const workers = [
-  {
-    id: 1,
-    name: "Amit Kumar",
-    skill: "Electrician",
-    location: "Delhi",
-    price: 500,
-    rating: 4.5,
-    photo: "./images/Worker1.jpg",
-  },
-  {
-    id: 2,
-    name: "Ravi Sharma",
-    skill: "Plumber",
-    location: "Mumbai",
-    price: 400,
-    rating: 4.7,
-    photo: "https://randomuser.me/api/portraits/men/12.jpg",
-  },
-  {
-    id: 3,
-    name: "Sandeep Singh",
-    skill: "Carpenter",
-    location: "Pune",
-    price: 600,
-    rating: 4.3,
-    photo: "https://randomuser.me/api/portraits/men/13.jpg",
-  },
-  {
-    id: 4,
-    name: "Ramesh Patel",
-    skill: "Painter",
-    location: "Chennai",
-    price: 350,
-    rating: 4.8,
-    photo: "https://randomuser.me/api/portraits/men/14.jpg",
-  },
-  {
-    id: 5,
-    name: "Vikas Yadav",
-    skill: "Labour Worker",
-    location: "Delhi",
-    price: 300,
-    rating: 4.2,
-    photo: "Worker1.jpg",
-  },
-];
+function WorkerList({ workers }) {
+  const navigate = useNavigate();
 
-function WorkerList({ workers, onBook }) {
+  const handleBookClick = (worker) => {
+    // Navigate to BookWorker page and pass worker data via state
+    navigate(`/bookworker/${worker.id}`, { state: { worker } });
+  };
+
   return (
     <div className="worker-list">
       {workers.length === 0 ? (
@@ -64,7 +24,7 @@ function WorkerList({ workers, onBook }) {
                 src={worker.photo}
                 alt={worker.name}
                 className="worker-photo"
-/>
+              />
               <h3>{worker.name}</h3>
               <p className="worker-skill">{worker.skill}</p>
               <div className="worker-details">
@@ -78,9 +38,9 @@ function WorkerList({ workers, onBook }) {
                   <strong>Rating:</strong> ⭐{worker.rating}
                 </p>
               </div>
-              <button
+              <button 
                 className="book-btn"
-                onClick={() => onBook(worker)}
+                onClick={() => handleBookClick(worker)}
               >
                 Book Worker
               </button>
@@ -90,7 +50,6 @@ function WorkerList({ workers, onBook }) {
       )}
     </div>
   );
-
 }
 
 export default WorkerList;

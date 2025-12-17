@@ -29,19 +29,20 @@
 .worker-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #bae3e5;
+
 }
 
 /* 🖼️ Worker Image */
 .worker-photo {
-  width: 120px;
-  height: 120px;
+
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 12px;
+   
   border: 3px solid #007bff;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+
   background-color: #f0f0f0;
 }
 
@@ -51,6 +52,7 @@
   margin: 0px 0 5px;
   font-size: 20px;
   color: #222;
+  padding-top: 0%;
 }
 
 .worker-skill {
@@ -58,10 +60,17 @@
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
+  padding-left: 30% ;
 }
+.worker-card h3{
+  padding-left: 20%;
+  
+ 
 
+}
 /* 📋 Worker Details */
 .worker-details {
+
   font-size: 15px;
   color: #444;
   margin-bottom: 12px;
@@ -69,6 +78,9 @@
 
 .worker-details p {
   margin: 4px 0;
+  padding-left: 20%;
+  
+
 }
 
 /* 🎯 Book Button */
@@ -90,7 +102,7 @@
 
 /* 🚫 No Worker Message */
 .no-worker {
-  color: #ff4444;
+  color: #08a59d;
   font-weight: 600;
   font-size: 18px;
   margin-top: 40px;

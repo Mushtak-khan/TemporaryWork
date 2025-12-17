@@ -56,12 +56,7 @@ function UserRegister() {
             />
           </div>
 
-          <div className="options">
-            <Link className="forgot" to="#">
-              Forgot Password?
-            </Link>
-          </div>
-
+          
           <button className="login-btn" type="submit">
             REGISTER
           </button>
@@ -76,8 +71,5 @@ function UserRegister() {
     </div>
   );
 }
-
-
-
-
 export default UserRegister;
+

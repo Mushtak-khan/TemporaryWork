@@ -6,11 +6,17 @@ import "./Navbar.css";
 function Navbar({ onHomeClick }) {
   return (
     <nav className="navbar">
-      <Link to="/" className="logo" onClick={onHomeClick}>WorkDone</Link>
+
+      {/* ✅ Logo redirects to Home and triggers onHomeClick */}
+      <Link to="/" className="logo" onClick={onHomeClick}>
+        WorkDone
+      </Link>
+
       <ul className="nav-links">
-        <li><Link to="/" onClick={onHomeClick}>Home</Link></li>
-        <li><Link to="/userlogin">User Login</Link></li>
-        <li><Link to="/workerlogin">Worker Login</Link></li>
+        <b><li><Link to="/notifications" >🔔</Link></li></b>
+        <b><li><Link to="/" onClick={onHomeClick}>Home</Link></li></b>
+        <b><li><Link to="/userlogin">User Login</Link></li></b>
+        <b><li><Link to="/workerlogin">Worker Login</Link></li></b>
       </ul>
     </nav>
   );
